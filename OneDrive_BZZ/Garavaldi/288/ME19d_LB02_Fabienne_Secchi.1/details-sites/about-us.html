@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Wollyhood - Converter</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="../img/jordan_icon.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="../css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Start your project here-->
+  <!--Main Navigation-->
+  <header style="height: 15%; background-color: #24355C">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top">
+
+      <div class="container">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#"><img src="../img/wollyhoodlogo-white.png" width="30%"></a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto smooth-scroll">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#coming-soon">Coming Soon</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#examples">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#gallery">Daily</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="converter.html">Converter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+          </ul>
+          <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+
+      </div>
+
+    </nav>
+    <!--/.Navbar-->
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="mt-5">
+
+    <!--About Us Text-->
+    <section class="text-center">
+
+      <!-- Heading -->
+      <h2 class="mb-5 font-weight-bold">About Us</h2>
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center mb-4">
+
+        <!--Grid column-->
+        <div class="col-md-8">
+
+          <!-- Description -->
+          <p id="msg" class="grey-text">Folgend kommt nur Platzhaltertext.</p>
+             <script>
+              let text = document.getElementById("msg").innerHTML;
+              text+= " " + "Vielen Dank für ihr Verständnis.";
+              document.getElementById("msg").innerHTML = text;
+             </script>
+
+          <p class="grey-text">Wie unsere besten Kunden sicher schon erfahren haben und erlebt haben verkaufen wir Sneaker aus aller Welt. Deshalb haben wir uns verpflichtet gefüllt euch etwas Beistand zu geben und euch dabei zu unterstützen den perfekten Sneaker für euer budget zu finden. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+          <p class="grey-text">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer</p>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+    </section>
+    <!--About Us Text-->
+
+    <!--JSON-->
+    <section class="text-center" id="json">
+
+      <h2 class="mb-5 font-weight-bold">Task Liste</h2>
+
+        <select id="myselect" onchange="change_myselect(this.value)">
+          <option value="">Choose</option>
+          <option value="partner">Tasks with ID</option>
+          <option value="supporter">Tasks without ID</option>
+        </select>
+
+      <p id="demo"></p>
+
+        <script>
+
+          function change_myselect(sel) {
+            var obj, dbParam, xmlhttp, myObj, x, txt = "";
+            obj = {table: sel, limit: 20 };
+
+            dbParam = JSON.stringify(obj);
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                myObj = JSON.parse(this.responseText);
+                txt += "<table border='1'>"
+                for (x in myObj) {
+                  txt += "<tr><td>id: " + myObj[x].id+"task: "+ myObj[x].title + "</td></tr>";
+                }
+
+                txt += "</table>"
+                document.getElementById("demo").innerHTML = txt;
+              }
+
+            };
+            xmlhttp.open("GET", "https://jsonplaceholder.typicode.com/todos", true);
+            xmlhttp.setRequestHeader("Content-type", "application/json");
+            xmlhttp.send();
+          }
+
+        </script>
+
+    </section>
+  </main>
+  <!--Main layout-->
+
+  <!-- Footer -->
+    <footer class="page-footer unique-color-dark">
+
+        <!-- Social buttons -->
+        <div class="primary-color">
+          <div class="container">
+            <!--Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+
+              <!--Grid column-->
+              <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-6 col-lg-7 text-center text-md-right">
+                <!--Facebook-->
+                <a href="https://www.facebook.com/Swisscom" class="fb-ic ml-0" target="_blank">
+                  <i class="fab fa-facebook-f white-text mr-4"> </i>
+                </a>
+                <!--Instagram-->
+                <a href="https://www.instagram.com/swisscom/" class="ins-ic" target="_blank">
+                  <i class="fab fa-instagram white-text mr-lg-4"> </i>
+                </a>
+              </div>
+              <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+          </div>
+        </div>
+        <!-- Social buttons -->
+
+        <!--Footer Links-->
+    <div class="container mt-5 mb-4 text-center text-md-left">
+      <div class="row mt-3">
+
+        <!--First column-->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+          <h6 class="text-uppercase font-weight-bold">
+            <strong>Wollyhood</strong>
+          </h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit.</p>
+        </div>
+        <!--/.First column-->
+
+        <!--Second column-->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">
+            <strong>Products</strong>
+          </h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            Das
+          </p>
+          <p>
+            ist
+          </p>
+          <p>
+            ein
+          </p>
+          <p>
+            Beispiel
+          </p>
+        </div>
+        <!--/.Second column-->
+
+        <!--Third column-->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">
+            <strong>Useful links</strong>
+          </h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="https://soundcloud.com/erik-baur/you-come-around" target="_blank" >Your Account</a>
+          </p>
+          <p>
+            <a href="https://soundcloud.com/erik-baur/you-come-around" target="_blank" >Become an Affiliate</a>
+          </p>
+          <p>
+            <a href="https://soundcloud.com/erik-baur/you-come-around" target="_blank" >Shipping Rates</a>
+          </p>
+          <p>
+            <a href="https://soundcloud.com/erik-baur/you-come-around" target="_blank" >Help</a>
+          </p>
+        </div>
+        <!--/.Third column-->
+
+        <!--Fourth column-->
+        <div class="col-md-4 col-lg-3 col-xl-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <strong>Contact</strong>
+          </h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home  mr-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+        </div>
+        <!--/.Fourth column-->
+
+      </div>
+    </div>
+    <!--/.Footer Links-->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        LB 02 2021 von Fabienne Secchi
+      </div>
+      <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  <!-- End your project here-->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+
+
+
+  <!-- Carousel options -->
+  <script>
+    $('.carousel').carousel({
+      interval: 3000,
+    })
+  </script>
+
+</body>
+</html>
